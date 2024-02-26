@@ -20,7 +20,7 @@ const Hero = () => {
   return (
     <section className="py-20">
       <div className="container px-4 mx-auto">
-        <div className="flex justify-between items-center">
+        <div className="lg:flex justify-between items-center">
           <div className="lg:w-5/12 mb-10 lg:mb-0">
             {heroContent.text.subheading && (
               <span className="inline-block py-0.5 pl-3 text-heading font-semibold relative mb-7 before:content-[''] before:absolute before:w-2/3 before:bg-yellowLight before:left-0 before:top-0 before:bottom-0 before:z-[-1]">
