@@ -22,7 +22,7 @@ const statContent = {
   getStarted: {
     heading: "Get Started With our Services",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc, ultrices.",
+      "We understand that protecting your loved ones is of utmost importance.",
     img: "/images/illustration-woman.svg",
     cta: {
       cta_href: "#_",
@@ -62,7 +62,7 @@ const Stats = () => {
                 </h3>
               )}
               {statContent.getStarted.description && (
-                <p className="text-md mb-5">
+                <p className="text-body mb-5">
                   {statContent.getStarted.description}
                 </p>
               )}
