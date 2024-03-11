@@ -1,6 +1,10 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const heroContent = {
   text: {
     subheading: "Welcome to FamSec",
@@ -17,23 +21,41 @@ const heroContent = {
   },
 };
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      easing: "ease-in-out",
+      once: true,
+    });
+  }, []);
   return (
     <section className="py-20">
       <div className="container px-4 mx-auto">
         <div className="lg:flex justify-between items-center">
           <div className="lg:w-5/12 mb-10 lg:mb-0">
             {heroContent.text.subheading && (
-              <span className="inline-block py-0.5 pl-3 text-heading font-semibold relative mb-7 before:content-[''] before:absolute before:w-2/3 before:bg-yellowLight before:left-0 before:top-0 before:bottom-0 before:z-[-1]">
+              <span
+                className="inline-block py-0.5 pl-3 text-heading font-semibold relative mb-7 before:content-[''] before:absolute before:w-2/3 before:bg-yellowLight before:left-0 before:top-0 before:bottom-0 before:z-[-1]"
+                data-aos="fade-up"
+              >
                 {heroContent.text.subheading}
               </span>
             )}
             {heroContent.text.heading && (
-              <h1 className="text-4xl lg:text-5xl font-bold text-heading mb-7">
+              <h1
+                className="text-4xl lg:text-5xl font-bold text-heading mb-7"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 {heroContent.text.heading}
               </h1>
             )}
             {heroContent.text.description && (
-              <p className="leading-relaxed text-body mb-10">
+              <p
+                className="leading-relaxed text-body mb-10"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 {heroContent.text.description}
               </p>
             )}
@@ -62,6 +84,7 @@ const Hero = () => {
                     width={397}
                     height={406}
                     className="object-cover h-full w-full rounded-2xl"
+                    data-aos="fade-in"
                   />
                 )}
               </div>
@@ -75,6 +98,8 @@ const Hero = () => {
                         width={437}
                         height={437}
                         className="object-cover h-full w-full rounded-2xl"
+                        data-aos="fade-in"
+                        data-aos-delay="100"
                       />
                     </div>
                   )}
@@ -88,6 +113,8 @@ const Hero = () => {
                       width={374}
                       height={392}
                       className="object-cover h-full w-full rounded-2xl"
+                      data-aos="fade-in"
+                      data-aos-delay="200"
                     />
                   </div>
                 )}
@@ -105,6 +132,8 @@ const Hero = () => {
                         width={394}
                         height={394}
                         className="object-cover h-full w-full rounded-2xl"
+                        data-aos="fade-in"
+                        data-aos-delay="300"
                       />
                     </div>
                   )}
@@ -118,6 +147,8 @@ const Hero = () => {
                     width={394}
                     height={394}
                     className="object-cover h-full w-full rounded-2xl"
+                    data-aos="fade-in"
+                    data-aos-delay="400"
                   />
                 )}
               </div>
